@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "Menu";
+}
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/css/menu3.css" />
+    </head>
+    <body>
+
+        <header>
+            <div class="titulologo">
+                <img class="logito" src="/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                    <li><a href="../Vistas/Acciones"> Acciones</a></li>
+                    <li><a href="../Vistas/Usuarios"> Usuarios</a></li>
+                <li> <a href="../Vistas/crudAreas"> Areas</a></li>
+                <li> <a href="../Vistas/crudCargos">Cargos</a></li>
+                    <li><a href="../Vistas/soporte"> Contacto</a></li>
+                    <li><a href="../Vistas/soporte"> Soporte</a></li>
+                    <li><a href="../Home/login"> Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <h2>Perfil Administrador</h2>
+        <div class="contenedor">
+            <div class="m1">
+                <div class="imagenload">
+                    <img src="/lib/imagenes/upload.png" alt="#">
+                </div>
+
+                <form action="../Vistas/NArchivo" method="get">
+                    <input class="botones" type="submit" value=" Ingresar Nuevo Archivo" />
+                </form>
+            </div>
+
+            <div class="m2">
+                <div class="imagenload">
+                    <img src="/lib/imagenes/revisar.png" alt="#">
+                </div>
+
+                <form action="../Vistas/Revision" method="get">
+                    <input class="botones" type="submit" value=" Revisar Archivos " />
+                </form>
+            </div>
+
+            <div class="m3">
+                <div class="imagenload">
+                    <img src="/lib/imagenes/archive.png" alt="#">
+                </div>
+
+                <form action="../Vistas/Admin" method="get">
+                    <input class="botones" type="submit" value=" Biblioteca virtual " />
+                </form>
+            </div>
+
+            <div class="m4">
+                <div class="imagenload">
+                    <img src="/lib/imagenes/new.png" alt="#">
+                </div>
+
+                <form action="../Vistas/NUsuario" method="get">
+                    <input class="botones" type="submit" value=" Acciones Usuario" />
+                </form>
+            </div>
+        </div>
+        <footer>
+            © 2023 Farmcia Equisde. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

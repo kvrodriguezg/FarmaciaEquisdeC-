@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "verificador";
+}
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/css/verificado.css" />
+    </head>
+    <body>
+    <div class="padre" runat="server">
+        <div class="formulario">
+            <img src="/lib/imagenes/user.png" alt="imagen" />
+            <h1>Verificacion en dos pasos</h1>
+            <p>Ingrese su codigo de autenticacion</p>
+            @model FarmaciaEquisde.Models.LoginCaptcha
+            <form method="post" asp-controller="Vistas" asp-action="ValidarCodigo">
+                <div class="username">
+                    <input type="text" required asp-for="EmailVerificador" />
+                </div>
+                <input type="submit" onclick="alerta" value="Validar" />
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function alerta()
+        {
+            swal("Verificacion en dos pasos", "Codigo Verificado", "success");
+        }
+    </script>
+    </body>
+</html>

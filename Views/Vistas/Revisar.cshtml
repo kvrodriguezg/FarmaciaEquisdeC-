@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Revisar";
+}
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/revisar.css">
+    </head>
+    <body>
+        <header>
+            <div class="titulologo">
+                <img class="logito" src="/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                <li><a href="../Vistas/soporte">Contacto</a></li>
+                <li><a href="../Vistas/soporte">Soporte</a></li>
+                <li><a href="../Home/login">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <h2>Revisar Archivo</h2>
+        
+            <div class="contenedor">
+                <img src="/lib/images/PDF.png" alt="upload">
+                <h5><a href="../Vistas/Descarga">@ViewBag.nombre</a> </h5>
+                <div class="indicaciones">
+                    <form method="post" action="../Vistas/Aprovar">
+                        <input type="submit" value="Aprobado" class="botones" />
+                    </form>
+                    <br />
+                    <form method="post" action="../Vistas/Rechazar">
+                        <input type="submit" value="Rechazado" class="botones"/>
+                    </form>
+                </div>
+            
+            
+            </div>
+        <h1>@ViewBag.mensaje</h1>
+        @Html.Raw(ViewBag.eliminar)
+        </div>
+    
+        <footer>
+            © 2023 Farmcia Equisde. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

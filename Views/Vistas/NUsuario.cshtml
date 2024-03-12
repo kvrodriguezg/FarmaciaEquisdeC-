@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "NUsuario";
+}
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/css/nuevoUsuario.css" />
+
+    </head>
+    <body>
+        <header>
+            <div class="titulologo">
+                <img class="logito" src="~/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                <li><a href="../Vistas/soporte">Contacto</a></li>
+                <li><a href="../Vistas/soporte">Soporte</a></li>
+                <li><a href="../Home/login">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        
+            <h2>@ViewBag.mensaje</h2>
+       <div class="padre">
+            <div class="formulario">
+                <img src="/lib/imagenes/new.png" alt="imagen" />
+                <h1>Registro de Usuario</h1>
+
+                <form method="post" action="../Vistas/Ingreso">
+
+                    <div class="username">
+                        <input type="text" required placeholder="Nombre" name="nombre" />
+                    </div>
+                    <div class="username">
+                        <input type="text" required placeholder="Rut" name="rut"  />
+                    </div>
+                    <div class="username">
+                    <input type="text" required placeholder="Email" name="correo" />
+                    </div>
+                     <div class="username">
+                    <input type="number" required placeholder="Area" name="area" />
+                    </div>
+                    <div class="username">
+                    <input type="number" required placeholder="Cargo" name="cargo" />
+                    </div>
+                    <div class="username">
+                    <input type="text" required placeholder="Credenciales" maxlength="10" name="clave" />
+                    </div>
+                    <input class="registrar" type="submit" value="Registrar" />
+                </form>
+                <form action="../Vistas/Modifico" method=" post">
+                        <input class="registrar" type="submit" value="Ir a Modificar" />
+                </form>
+                <form method="post" action="../Vistas/Eliminar">
+
+                <div class="username">
+                    <input type="text" required placeholder="Rut" name="rut" />
+                </div>
+                <input class="registrar" type="submit" value="Eliminar"  />
+                </form>
+            </div>
+       </div>
+    
+    </body>
+</html>

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "NUsuario";
+}
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/css/accionTablas.css" />
+
+
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+    </head>
+    <body>
+        <header>
+            <div class="titulologo">
+                <img class="logito" src="~/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                <li><a href="../Vistas/soporte">Contacto</a></li>
+                <li><a href="../Vistas/soporte">Soporte</a></li>
+                <li><a href="../Home/login">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="padre">
+            <div class="formulario">
+                <img src="/lib/imagenes/new.png" alt="imagen" />
+                <h1>CRUD</h1>
+
+                <form method="post" action="../Vistas/modifyAreas">
+
+                    <div class="username">
+                        <input type="number" required placeholder="Codigo de Area" name="codigo" value=@ViewBag.dt2 />
+                    </div>
+                   
+                    
+                    <input class="registrar" type="submit" value="buscar" />
+                </form>
+                <form action="../Vistas/modificarArea" method=" post">
+                        <div class="username">
+                            <input type="number" required placeholder="Codigo de Area" name="codigo" value=@ViewBag.dt2 />
+                        </div>
+                        <div class="username">
+                            <input type="text" placeholder="nombre" name="nombre" value=@ViewBag.dt />
+                        </div>
+                        <input class="registrar" type="submit" value="Modificar" />
+                </form>
+                <form method="post" action="../Vistas/eliminarArea">
+
+                <div class="username">
+                    <input type="text" required placeholder="Codigo" name="Codigo" value=@ViewBag.dt2/>
+                </div>
+                <input class="registrar" type="submit" value="Eliminar"  />
+                </form>
+                <form method="post" action="../Vistas/insertarArea">
+
+                    <div class="username">
+                        <input type="text" required placeholder="Codigo" name="Codigo" />
+                    </div>
+                    <div class="username">
+                        <input type="text" placeholder="nombre" name="nombre" />
+                    </div>
+                    <input class="registrar" type="submit" value="insertar" />
+                </form>
+            </div>
+            </div>
+    @if (ViewBag.alerta != null)
+    {
+        <script>
+            alert('@ViewBag.alerta');
+        </script>
+    }
+
+    
+    </body>
+</html>

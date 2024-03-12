@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/index.css">
+    </head>
+        <body>
+            <header>
+                <div class="titulologo">
+                    <img class="logito" src="/lib/imagenes/cruz.png" alt="logo"/>
+                    <h1>Farmacia Equisde</h1>
+                </div>
+        
+                <nav>
+                    <ul>
+             
+                        <li><form action="../Vistas/soporte" method="post"><button class="botoncontacto">Contacto</button></form></li>
+                
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="container">
+
+                    <img src="/lib/imagenes/img1.jpg" alt="imgprincipal">
+
+                    <!--Contenedor utilizado para hacer un efecto de cuadro con desenfoque-->
+                    <div class="letras"> 
+                    
+                    </div> 
+                
+                    <p class="parrafo">
+                            Sistema de gestion documental
+                    </p>
+                    <p class="bienvenida"> FARMACIA EQUISDE.</P>
+                    <p class="parrafo2">
+                        Para acceder al sistema, haz clic en el siguiente boton.<br>
+                        Si tienes problemas con tus credenciales<br> accede al apartado de soporte, o contacta con tu area correspondientes<br>
+                        desde el boton de contacto. ¡Bienvenido(a)!
+                    </p>
+                 
+                    <form method="post" action="../Home/login">
+                        <button class="boton" type="submit">Entrar</button>
+                    </form>
+                    <form action="../Vistas/soporte" method="post">
+                        <button class="boton2" > <img src="/lib/imagenes/soporte.png" alt="soporte"></button>
+                    </form>
+
+                </div>
+
+            </main>
+            <footer>
+                © 2023 Farmcia Equisde. Todos los derechos reservados
+            </footer>
+        </body>
+</html>

@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Menu";
+}
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/nuevoArchivo.css">
+    </head>
+    <body>
+        <header>
+            <div class="titulologo">
+                <img class="logito" src="/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                    <li><a href ="../Vistas/soporte">Contacto</a></li>
+                    <li><a href="../Vistas/soporte">Soporte</a></li>
+                    <li><a href="../Home/login">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <h2>Nuevo Archivo</h2>
+            <div class="contenedor">
+                <img src="/lib/imagenes/upload.png" alt="upload">
+                
+                <form action="../Vistas/Subir" method="post" enctype="multipart/form-data">
+                <input type="file" id="archivo" name="archivo" placeholder="Cargar Arhivo" accept="application/pdf" />
+
+                <input class="botones" type="submit" value=" Ingresar " />
+                </form>
+                <div class="indicaciones">
+                    <p>
+                        Los archivos deben ser subidos en formato .pdf.
+                        en caso de subir un archivo erroneo, debera esperar a que el documento pase al estado rechazado
+                        para repetir el proceso de subida. Si por error sube un documento incorrecto,
+                        use el enlace de contacto para reportar el incidente.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            © 2023 Farmcia Equisde. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

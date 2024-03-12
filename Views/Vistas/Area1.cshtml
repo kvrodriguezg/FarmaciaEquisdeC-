@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "Area1";
+}
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/area1.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="titulologo">
+                <img class="logito" src="/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                    <li><a href="#aprobados">Aprobados</a></li>
+                    <li><a href="#revision">En Revision</a></li>
+                    <li><a href="#rechazados">Rechazados</a></li>
+                    <li><a href="../Vistas/soporte"> Contacto</a></li>
+                    <li><a href="../Home/login"> Cerrar Sesion</a></li>
+
+                </ul>
+            </nav>
+
+        </header>
+        <br />
+        <h1 id="inicio">Area @ViewBag.area</h1>
+        <h2 id="aprobados">Archivos Aprobados</h2>
+
+        <table>
+            @Html.Raw(ViewBag.aprovados)
+        </table>
+
+        @*<a class="inicio" href="#inicio">Volver a inicio</a>*@
+        <h2 id="revision">Archivos por revisar </h2>
+
+        <table>
+            @Html.Raw(ViewBag.revision)
+        </table>
+
+        @*<a class="inicio" href="#inicio">Volver a inicio</a>*@
+        <h2 id="rechazados">Archivos Rechazados</h2>
+
+        <table>
+            @Html.Raw(ViewBag.rechazados)
+        </table>
+
+        @*<a class="inicio" href="#inicio">Volver a inicio</a>*@
+
+        <footer>
+            © 2023 Farmcia Equisde. Todos los derechos reservados
+        </footer>
+
+    </body>
+</html>

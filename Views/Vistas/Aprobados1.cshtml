@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Aprobados1";
+}
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/biblioteca.css">
+    </head>
+    <body>
+
+        <header>
+
+            <div class="titulologo">
+                <img class="logito" src="/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                    <li><a href="../Vistas/soporte"> Contacto</a></li>
+                    <li><a href="../Vistas/soporte"> Soporte</a></li>
+                    <li><a href="../Home/login"> Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+
+        <h1 class="titulo">Biblioteca De Archivos</h1>
+        <br />
+        <div class="archivos">
+
+            <table class="tabla">
+                @Html.Raw(ViewBag.mensaje)
+            </table>
+
+        </div>
+
+        <footer>
+            © 2023 Farmcia Equisde. Todos los derechos reservados
+        </footer>
+
+    </body>
+</html>

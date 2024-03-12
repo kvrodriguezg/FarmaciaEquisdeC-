@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="~/css/login.css" />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <script type="text/javascript">
+            history.pushState(null, null, document.URL);
+            window.addEventListener('popstate', function ()
+            {
+                history.pushState(null, null, document.URL);
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="titulologo">
+                <img class="logito" src="~/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><form action="../Home/index" method="post"><button class="botoncontacto">Inicio</button></form></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="padre" runat="server">
+            <div class="formulario">
+
+                <img src="/lib/imagenes/user.png" alt="imagen" />
+                <h1>Inicio de Sesion</h1>
+
+            @model FarmaciaEquisde.Models.LoginCaptcha
+            <form asp-controller="Vistas" asp-action="Captcha" method="post" id="FormLogin">
+                <div class="username">
+                    <input type="text" required placeholder="Rut" maxlength="10" asp-for="Rut" />
+                </div>
+               
+                <div class="username">
+                    <input type="password" required placeholder="Password" asp-for="Password" />
+                </div>
+
+                    <div class="g-recaptcha" data-sitekey="6LfT6d8oAAAAAHekmrKorr1cJbUxclgz2lPbpt-_"></div>
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" />
+                
+                    <button type="button" class="NewBoton" onclick="validarFormulario()">Entrar</button>
+
+                    <div class="soporte">
+                        <a href="#">Soporte</a>
+                    </div>
+                </form>
+            </div>
+            <p>@ViewBag.mensaje</p>
+        </div>
+        <script>
+            function validarFormulario() {
+                var token = grecaptcha.getResponse();
+                if (!token) {
+                    swal("Error", "completa el CAPTCHA", "error");
+                } else {
+                    document.getElementById("g-recaptcha-response").value = token;                
+                    document.getElementById("FormLogin").submit();
+                }
+            }
+        </script>
+    </body>
+</html>

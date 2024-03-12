@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "acciones";
+}
+
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="/css/acciones.css"/>
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="titulologo">
+                <img class="logito" src="/lib/imagenes/cruz.png" alt="logo" />
+                <h1>Farmacia Equisde</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../Vistas/Menu" class="botoncontacto">Menu</a></li>
+                    <li><a href="../Vistas/soporte"> Contacto</a></li>
+                    <li><a href="../Vistas/soporte"> Soporte</a></li>
+                    <li><a href="../Home/login"> Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <h1 class="tituloacciones">Acciones</h1>
+
+        <table class="tabla">
+
+            @Html.Raw(ViewBag.mensaje)
+
+        </table>
+
+        <footer>
+            © 2023 Farmcia Equisde. Todos los derechos reservados
+        </footer>
+    </body>
+
+</html>
